@@ -220,3 +220,4 @@ bindsym $mod+Shift+p exec --no-startup-id variety -p
 bindsym $mod+Shift+f exec --no-startup-id variety -f
 
 exec --no-startup-id picom -b # 启动 picom
+exec --no-startup-id variety & # 启动 variety
