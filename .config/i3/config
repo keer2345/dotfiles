@@ -144,16 +144,16 @@ exec --no-startup-id xrandr --output $firstMonitor --left-of $secondMonitor --au
 # set $ws10 "10"
 
 # Workspaces (and display assignment)
-workspace 1 output $firstMonitor 
-workspace 2 output $firstMonitor 
-workspace 3 output $firstMonitor 
-workspace 4 output $firstMonitor 
-workspace 5 output $firstMonitor 
+workspace 1 output $secondMonitor 
+workspace 2 output $secondMonitor 
+workspace 3 output $secondMonitor 
+workspace 4 output $secondMonitor 
+workspace 5 output $secondMonitor 
 workspace 6 output $secondMonitor
 workspace 7 output $secondMonitor
 workspace 8 output $secondMonitor 
-workspace 9 output $secondMonitor 
-workspace 10 output $secondMonitor
+workspace 9 output $firstMonitor 
+workspace 10 output $firstMonitor
 
 # switch to workspace
 # bindsym $mod+1 workspace number $ws1
