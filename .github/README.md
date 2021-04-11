@@ -19,3 +19,4 @@ i3-gaps, polybar, rofi, picom, variety ...
 - [Archcraft Designer](https://github.com/adi1090x)
 - [A execllent designer of rofi + polybar](https://github.com/Murzchnvok)
 - [Vincintosh](https://github.com/Vincintosh/dots_sept2018)
+- [BrodieRobertson](https://github.com/BrodieRobertson/dotfiles)
