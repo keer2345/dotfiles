@@ -52,6 +52,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 bindsym $mod+Shift+d exec --no-startup-id dmenu_run
 bindsym $mod+d exec --no-startup-id rofi -show drun
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -253,19 +254,91 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
+# Colors
+set $bc #c3ff70
+set $borc #cecece
+
 exec_always --no-startup-id ~/.config/polybar/launch.sh 
 
-gaps inner 10
-gaps outer 0
-smart_gaps on
+# gaps inner 10
+# gaps outer 0
+# smart_gaps on
 
 # for_window [class="^.*"] border pixel 2 # 把所有的窗口边框设为 2 像素
 # new_window 1pixel # 去掉标题栏
 
+# new_window none
+# new_float normal
+# hide_edge_borders both
+
+
+# Window borders
 new_window none
-new_float normal
-hide_edge_borders both
+new_float none
+client.focused $bc $bc $bc $borc
+
+# Gaps 
+gaps inner 10
+gaps outer 2
+bindsym $mod+g mode "$mode_gaps"
+
+# Gaps settings mode
+set $mode_gaps Gaps: (e) esterni, (i) interni
+set $mode_gaps_e Gaps Esterni: +|-|0
+set $mode_gaps_i Gaps Interni: +|-|0
+
+mode "$mode_gaps" {
+	bindsym e	mode "$mode_gaps_e"
+	bindsym i 	mode "$mode_gaps_i"
+	bindsym Return	mode "default"
+	bindsym Escape	mode "default"
+}
+
+mode "$mode_gaps_e" {
+	bindsym plus	gaps outer all plus 5
+	bindsym minus	gaps outer all minus 5
+	bindsym 0	gaps outer all set 5
+	bindsym Return	mode "default"
+	bindsym Escape	mode "default"
+}
+
+mode "$mode_gaps_i" {
+	bindsym plus	gaps inner all plus 5
+	bindsym minus	gaps inner all minus 5
+	bindsym 0	gaps inner all set 10
+	bindsym Return	mode "default"
+	bindsym Escape	mode "default"
+}
+
+# Set/Unset zero Gaps on the fly should you need extra screen space
+bindsym $mod+Shift+G gaps outer all set 0; gaps inner all set 0
+bindsym $mod+Ctrl+G gaps outer all set 0; gaps inner all set 10
+
+
+## Volume Keys
+# bindsym XF86AudioRaiseVolume exec "pamixer -i 5 && aplay /home/vincintosh/.config/blop.wav"
+# bindsym $mod+F3 exec "pamixer -i 5 && aplay /home/vincintosh/.config/blop.wav"
+# bindsym XF86AudioLowerVolume exec "pamixer -d 5 && aplay /home/vincintosh/.config/blop.wav"
+# bindsym $mod+F2 exec "pamixer -d 5 && aplay /home/vincintosh/.config/blop.wav"
+# bindsym XF86AudioMute exec "pamixer -t && aplay /home/vincintosh/.config/blop.wav"
+# bindsym $mod+F1 exec "pamixer -t && aplay /home/vincintosh/.config/blop.wav"
  
+## Media Keys
+# bindsym $mod+m exec "urxvt -e ncmpcpp"
+# bindsym $mod+Shift+m exec "urxvt -e mpd"; exec "urxvt -e ncmpcpp"
+# bindsym $mod+Shift+n exec "urxvt -e ncmpcpp"
+# bindsym F11 exec "/home/vincintosh/.config/scripts/mpdplay.sh"
+# bindsym F9 exec "mpc stop && twmnc --sc /home/vincintosh/.config/sil.wav -d 3000 --bg lightyellow -t 'MPD' -c 'Stop '"
+# bindsym F10 exec "mpc prev"
+# bindsym F12 exec "mpc next"
+ 
+
+# Ask for battery remaining time
+# bindsym $mod+Shift+b exec "~/.config/scripts/batter.sh"
+
+# Empty the trash
+bindsym $mod+Shift+BackSpace exec "~/.config/scripts/emptyTrash.sh"
+
 exec --no-startup-id fcitx -r
 exec --no-startup-id sogou-qimpanel
 exec --no-startup-id fcitx-sogoupingyin
@@ -288,4 +361,5 @@ exec --no-startup-id picom -b # 启动 picom
 exec --no-startup-id variety & # 启动 variety
 
 # Manually lock the screen (no suspend/hibernate)
-bindsym $mod+mod1+l exec --no-startup-id betterlockscreen --off 10 -l blur 
+# bindsym $mod+mod1+l exec --no-startup-id betterlockscreen --off 10 -l blur 
+bindsym $mod+mod1+l exec --no-startup-id betterlockscreen --off 10 -l && betterlockscreen -u ~/.config/betterlockscreen
