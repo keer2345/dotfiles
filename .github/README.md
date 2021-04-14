@@ -12,7 +12,7 @@ I use a simple tool called [yadm](https://github.com/TheLocehiliosan/yadm) to ma
 
 ## Desktop Managerment Configuration
 
-i3-gaps, polybar, rofi, picom, variety ...
+i3-gaps, polybar, rofi, picom, variety, betterlockscreen ...
 
 - [i3 User’s Guide](https://i3wm.org/docs/userguide.html)
 - [千玄子的配置](https://zjuyk.gitlab.io/posts/i3wm-config/)
@@ -20,3 +20,9 @@ i3-gaps, polybar, rofi, picom, variety ...
 - [A execllent designer of rofi + polybar](https://github.com/Murzchnvok)
 - [Vincintosh](https://github.com/Vincintosh/dots_sept2018)
 - [BrodieRobertson](https://github.com/BrodieRobertson/dotfiles)
+- [davidarrieta](https://github.com/davidarrieta/dotfiles)
+- [geraldoahnert](https://github.com/geraldoahnert/wm4noobs)
+- [rafamadriz](https://github.com/rafamadriz/dotfiles)
+
+![](../.config/scripts/shotscreen01.png)
+![](../.config/scripts/shotscreen02.png)
