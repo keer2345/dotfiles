@@ -26,3 +26,4 @@ i3-gaps, polybar, rofi, picom, variety, betterlockscreen ...
 
 ![](../.config/scripts/shotscreen01.png)
 ![](../.config/scripts/shotscreen02.png)
+![](../.config/scripts/shotscreen03.png)
