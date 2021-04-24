@@ -151,7 +151,7 @@ format-disconnected-background = ${colors.bgcoreinfo}
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
-pin-workspaces=true
+;pin-workspaces=true
 
 ws-icon-0 = 1;1
 ws-icon-1 = 2;2
@@ -180,5 +180,11 @@ label-unfocused-padding = 2
 label-urgent = %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %icon%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
 
 format-margin = 1

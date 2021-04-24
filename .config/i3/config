@@ -153,7 +153,7 @@ workspace 5 output $secondMonitor
 workspace 6 output $secondMonitor
 workspace 7 output $secondMonitor
 workspace 8 output $secondMonitor 
-workspace 9 output $firstMonitor 
+workspace 9 output $secondMonitor 
 workspace 10 output $firstMonitor
 
 # switch to workspace
