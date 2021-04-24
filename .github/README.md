@@ -28,31 +28,3 @@ i3-gaps, polybar, rofi, picom, variety, betterlockscreen ...
 ![](../.config/scripts/shotscreen02.png)
 ![](../.config/scripts/shotscreen03.png)
 
-## About Double Dual graphic cards
-- Install Driver in *Hardware settings*
-- See all graphic cards with `mhwd -li`
-``` sh
-> mhwd -li
-> Installed PCI configs:
---------------------------------------------------------------------------------
-                  NAME               VERSION          FREEDRIVER           TYPE
---------------------------------------------------------------------------------
-          video-nvidia            2020.11.30               false            PCI
-           video-linux            2018.05.04                true            PCI
-```
-- Install script to switch between graphic cards:
-``` sh
-git clone https://github.com/dglt1/optimus-switch-sddm
-cd optimus-switch-sddm
-chmod +x install
-sudo ./install
-```
-- Switch graphic cards:
-``` sh
-sudo set-intel.sh
-```
-or:
-
-``` sh
-sudo set-nvidia.sh
-```
