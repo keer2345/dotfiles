@@ -102,6 +102,8 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$HOME/.emacs.d/bin:$PATH
 
+source /etc/profile.d/vte.sh
+
 alias s="screenfetch"
 alias r="ranger"
 
