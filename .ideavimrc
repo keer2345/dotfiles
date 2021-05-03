@@ -1,4 +1,5 @@
 " https://github.com/lylwo317/.my-ideavimrc/blob/master/.ideavimrc
+" https://github.com/schwich/ideavimrc/blob/master/.ideavimrc
 
 inoremap jk <ESC>
 
