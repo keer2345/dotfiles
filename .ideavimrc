@@ -2,6 +2,7 @@
 
 inoremap jk <ESC>
 
+
 "leader
 let mapleader=","
 
