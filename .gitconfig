@@ -19,4 +19,4 @@
 [http]
   postBuffer = 524288000
 [credential]
-  helper = store
+	helper = cache --timeout=180000

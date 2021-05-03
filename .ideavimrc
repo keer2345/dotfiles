@@ -1,0 +1,17 @@
+" https://github.com/lylwo317/.my-ideavimrc/blob/master/.ideavimrc
+
+inoremap jk <ESC>
+
+"leader
+let mapleader=","
+
+"启用vimsurround功能
+set surround
+"启用multicursor
+set multiple-cursors
+"启用注释功能
+set commentary
+"共享系统粘贴板
+set clipboard=unnamedplus
+
+set number relativenumber
