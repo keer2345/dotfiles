@@ -106,6 +106,7 @@ source /etc/profile.d/vte.sh
 
 alias s="screenfetch"
 alias r="ranger"
+alias pacman-mirror="sudo pacman-mirrors -i -c China -m rank"
 
 alias goproxy='export http_proxy=http://127.0.0.1:8887 https_proxy=http://127.0.0.1:8887'
 alias disproxy='unset http_proxy https_proxy'
