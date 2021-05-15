@@ -4,13 +4,15 @@
 
 This repository contains the configuration files for the tools I use day-to-day.
 
-I use a simple tool called [yadm](https://github.com/TheLocehiliosan/yadm) to manage my dotfiles, but it's not required, we can use other *dotfiles* tools to reference [Awesome dotfiles](https://github.com/webpro/awesome-dotfiles).
+I use a simple tool called [yadm](https://github.com/TheLocehiliosan/yadm) to manage my dotfiles, but it's not required, we can use other _dotfiles_ tools to reference [Awesome dotfiles](https://github.com/webpro/awesome-dotfiles).
 
 - [Yadm Getting Started](https://yadm.io/docs/getting_started)
 - [Yadm：我是如何同步并管理我的 Dotfiles 的？](https://blog.spencerwoo.com/2020/07/how-i-manage-my-dotfiles).
 - Some great setups: [paulirish](https://github.com/paulirish/dotfiles), [mathiasbynens](https://github.com/mathiasbynens/dotfiles/), [alrra](https://github.com/alrra/dotfiles/), [paulmillr](https://github.com/paulmillr/dotfiles), [gf3](https://github.com/gf3/dotfiles).
 
 ## Desktop Managerment Configuration
+
+### I3
 
 i3-gaps, polybar, rofi, picom, variety, betterlockscreen ...
 
@@ -28,3 +30,23 @@ i3-gaps, polybar, rofi, picom, variety, betterlockscreen ...
 ![](../.config/scripts/shotscreen02.png)
 ![](../.config/scripts/shotscreen03.png)
 
+### LXDE
+
+**Configuration File:** `~/.config/openbox/lxde-rc.xml`.
+
+**Enable Touchpad to click** and **Scorll to natural**
+
+```sh
+sudo vim /etc/X11/xorg.conf.d/30-touchpad.conf
+```
+
+```sh
+Section "InputClass"
+  Identifier "libinput touchpad catchall"
+  MatchIsTouchpad "on"
+  MatchDevicePath "/dev/input/event*"
+  Driver "libinput"
+  Option "NaturalScrolling" "true"
+  Option "Tapping" "on"
+EndSection
+```
