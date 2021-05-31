@@ -34,6 +34,20 @@ i3-gaps, polybar, rofi, picom, variety, betterlockscreen ...
 
 **Configuration File:** `~/.config/openbox/lxde-rc.xml`.
 
+### Openbox
+
+- `~/.config/openbox/rc.xml`
+- `~/.config/openbox/menu.xml`
+
+**Keymap:**
+
+- `W-S-e` _openbox --reconfigure_
+- `W-S-m` _obmenu-generator -s -c_
+
+## Other Configuration
+
+### Touchpad for Notebook
+
 **Enable Touchpad to click** and **Scorll to natural**
 
 ```sh
