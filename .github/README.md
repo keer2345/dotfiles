@@ -36,6 +36,8 @@ i3-gaps, polybar, rofi, picom, variety, betterlockscreen ...
 
 ### Openbox
 
+openbox, obconf, obmenu-generator, tint2
+
 - `~/.config/openbox/rc.xml`
 - `~/.config/openbox/menu.xml`
 

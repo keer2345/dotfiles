@@ -356,7 +356,7 @@
     </keybind>
     <keybind key="W-S-m">
       <action name="Execute">
-        <command>obmenu-generator -s -c</command>
+        <command>obmenu-generator -p -c</command>
       </action>
     </keybind>
     <keybind key="W-p">
