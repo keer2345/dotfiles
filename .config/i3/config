@@ -357,7 +357,7 @@ bindsym $mod+Shift+p exec --no-startup-id variety -p
 # favorite wallpaper
 bindsym $mod+Shift+f exec --no-startup-id variety -f
 
-exec --no-startup-id picom -b # 启动 picom
+# exec --no-startup-id picom -b # 启动 picom
 exec --no-startup-id variety & # 启动 variety
 exec --no-startup-id cd ~/software/qv2ray && ./Qv2ray.v2.6.3.linux-x64.AppImage & # 启动 variety
 
