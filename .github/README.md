@@ -1,5 +1,17 @@
 # dotfiles
 
+
+       ▄▄                         ▄▄▄▄      ██     ▄▄▄▄                         
+       ██              ██        ██▀▀▀      ▀▀     ▀▀██                         
+  ▄███▄██   ▄████▄   ███████   ███████    ████       ██       ▄████▄   ▄▄█████▄ 
+ ██▀  ▀██  ██▀  ▀██    ██        ██         ██       ██      ██▄▄▄▄██  ██▄▄▄▄ ▀ 
+ ██    ██  ██    ██    ██        ██         ██       ██      ██▀▀▀▀▀▀   ▀▀▀▀██▄ 
+ ▀██▄▄███  ▀██▄▄██▀    ██▄▄▄     ██      ▄▄▄██▄▄▄    ██▄▄▄   ▀██▄▄▄▄█  █▄▄▄▄▄██ 
+   ▀▀▀ ▀▀    ▀▀▀▀       ▀▀▀▀     ▀▀      ▀▀▀▀▀▀▀▀     ▀▀▀▀     ▀▀▀▀▀    ▀▀▀▀▀▀  
+
+
+> banner generator: https://www.bootschool.net/ascii
+
 ## yadm
 
 This repository contains the configuration files for the tools I use day-to-day.
