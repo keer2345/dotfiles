@@ -104,6 +104,7 @@ export PATH=$HOME/.emacs.d/bin:$PATH
 
 source /etc/profile.d/vte.sh
 
+alias vim="nvim"
 alias s="screenfetch"
 alias r="ranger"
 alias pacman-mirror="sudo pacman-mirrors -i -c China -m rank"
