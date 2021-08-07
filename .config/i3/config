@@ -361,7 +361,7 @@ bindsym $mod+Shift+f exec --no-startup-id variety -f
 exec --no-startup-id picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 
 
 exec --no-startup-id variety & # 启动 variety
-exec --no-startup-id cd ~/software/qv2ray && ./Qv2ray.v2.6.3.linux-x64.AppImage & # 启动 variety
+# exec --no-startup-id cd ~/software/qv2ray && ./Qv2ray.v2.6.3.linux-x64.AppImage & # 启动 variety
 
 # Manually lock the screen (no suspend/hibernate)
 # bindsym $mod+mod1+l exec --no-startup-id betterlockscreen --off 10 -l blur 
