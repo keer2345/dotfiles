@@ -16,6 +16,7 @@ I use a simple tool called [yadm](https://github.com/TheLocehiliosan/yadm) to ma
 
 i3-gaps, polybar, rofi, picom, variety, betterlockscreen ...
 
+- [ayamir](https://github.com/ayamir/i3-dotfiles)
 - [i3 User’s Guide](https://i3wm.org/docs/userguide.html)
 - [千玄子的配置](https://zjuyk.gitlab.io/posts/i3wm-config/)
 - [Archcraft Designer](https://github.com/adi1090x)
@@ -45,6 +46,12 @@ openbox, obconf, obmenu-generator, tint2
 
 - `W-S-e` _openbox --reconfigure_
 - `W-S-m` _obmenu-generator -s -c_
+
+## Other WM
+### Ayamir's configuration
+- [bspwm](https://github.com/ayamir/bspwm-dotfiles)
+- [dwm](https://github.com/ayamir/dwm-dotfiles)
+- [other wm](https://github.com/ayamir/nord-and-light)
 
 ## Other Configuration
 

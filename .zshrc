@@ -107,9 +107,10 @@ source /etc/profile.d/vte.sh
 alias vim="nvim"
 alias s="screenfetch"
 alias r="ranger"
-alias pacman-mirror="sudo pacman-mirrors -i -c China -m rank"
+# alias pacman-mirror="sudo pacman-mirrors -i -c China -m rank"
+alias pacman-mirror="sudo reflector --verbose -c China --latest 12 --sort rate --threads 100 --save /etc/pacman.d/mirrorlist"
 
 alias hexo-dd="hexo clean & hexo g & hexo d"
 
-alias goproxy='export http_proxy=http://127.0.0.1:8887 https_proxy=http://127.0.0.1:8887'
+alias goproxy='export http_proxy=http://127.0.0.1:8889 https_proxy=http://127.0.0.1:8889'
 alias disproxy='unset http_proxy https_proxy'
