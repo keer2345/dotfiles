@@ -10,9 +10,17 @@ I use a simple tool called [yadm](https://github.com/TheLocehiliosan/yadm) to ma
 - [Yadm：我是如何同步并管理我的 Dotfiles 的？](https://blog.spencerwoo.com/2020/07/how-i-manage-my-dotfiles).
 - Some great setups: [paulirish](https://github.com/paulirish/dotfiles), [mathiasbynens](https://github.com/mathiasbynens/dotfiles/), [alrra](https://github.com/alrra/dotfiles/), [paulmillr](https://github.com/paulmillr/dotfiles), [gf3](https://github.com/gf3/dotfiles).
 
+```shell
+yadm clone git@github.com:keer2345/dotfiles.git
+```
+
 ## Archlinux Installation
 - [Archlinux 安装教程超详细](https://zhuanlan.zhihu.com/p/433920079)
 
+## Terminal
+```shell
+yay alacritty alacritty-theme
+```
 
 ## Desktop Managerment Configuration
 
