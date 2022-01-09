@@ -1,5 +1,5 @@
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [user]
   name = keer2345
   email = keer2345@gmail.com
@@ -19,4 +19,4 @@
 [http]
   postBuffer = 524288000
 [credential]
-	helper = wincred
+  helper = wincred
