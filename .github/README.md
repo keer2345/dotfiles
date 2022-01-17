@@ -26,25 +26,8 @@ yay alacritty alacritty-theme
 ## Desktop Managerment Configuration
 
 ### dwm
-
-- https://zhuanlan.zhihu.com/p/183861786
-- https://zhuanlan.zhihu.com/p/112536524
-- https://zhuanlan.zhihu.com/p/346719806?ivk_sa=1024320u
-
-```shell
-git clone https://git.suckless.org/dwm --depth=1
-git clone https://git.suckless.org/st --depth=1
-git clone https://git.suckless.org/dmenu --depth=1
-git clone https://git.suckless.org/slstatus --depth=1
-```
-```shell
-make
-sudo make clean install
-```
-```shell
-sudo systemctl disable lxdm.service
-cp /etc/X11/xinit/xinitrc .xinitrc
-```
+- [dwm configuration](https://github.com/keer2345/dwm)
+- [slstatus configuration](https://github.com/keer2345/slstatus)
 
 ### I3
 
