@@ -18,11 +18,33 @@ yadm clone git@github.com:keer2345/dotfiles.git
 - [Archlinux 安装教程超详细](https://zhuanlan.zhihu.com/p/433920079)
 
 ## Terminal
+
 ```shell
 yay alacritty alacritty-theme
 ```
 
 ## Desktop Managerment Configuration
+
+### dwm
+
+- https://zhuanlan.zhihu.com/p/183861786
+- https://zhuanlan.zhihu.com/p/112536524
+- https://zhuanlan.zhihu.com/p/346719806?ivk_sa=1024320u
+
+```shell
+git clone https://git.suckless.org/dwm --depth=1
+git clone https://git.suckless.org/st --depth=1
+git clone https://git.suckless.org/dmenu --depth=1
+git clone https://git.suckless.org/slstatus --depth=1
+```
+```shell
+make
+sudo make clean install
+```
+```shell
+sudo systemctl disable lxdm.service
+cp /etc/X11/xinit/xinitrc .xinitrc
+```
 
 ### I3
 
@@ -85,3 +107,8 @@ Section "InputClass"
   Option "Tapping" "on"
 EndSection
 ```
+
+### Rofi
+**Theme:**
+
+- https://github.com/Murzchnvok/rofi-collection
