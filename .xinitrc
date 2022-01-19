@@ -64,7 +64,7 @@ fcitx &
 udiskie &
 
 # picom -CGb &
-numlockx &
+# numlockx &
 
 exec slstatus &
 
