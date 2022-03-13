@@ -63,10 +63,18 @@ fcitx &
 
 qv2ray &
 udiskie &
+# nitrogen &
 
 # picom -CGb &
 # numlockx &
 
+# for Jetbrain IDEA
+# https://blog.csdn.net/u010563350/article/details/104948256
+export _JAVA_AWT_WM_NONREPARENTING=1
+export AWT_TOOLKIT=MToolkit
+wmname LG3D
+
 exec slstatus &
 
-exec dwm
+# exec dwm
+exec bspwm

@@ -100,6 +100,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias ssh_keer="ssh keer@110.40.253.93"
+
 # export PATH=$HOME/.emacs.d/bin:$PATH
 
 # source /etc/profile.d/vte.sh
@@ -113,3 +115,5 @@ alias pacman-mirror="sudo reflector --verbose -c China --latest 12 --sort rate -
  
 alias goproxy='export http_proxy=http://127.0.0.1:8889 https_proxy=http://127.0.0.1:8889'
 alias disproxy='unset http_proxy https_proxy'
+
+. $HOME/.asdf/asdf.sh
