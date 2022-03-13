@@ -14,15 +14,16 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-if [[ $(xrandr -q | grep '^DP-1 connected') ]]; then
-    MONITOR=DP-1 polybar --reload top &
-else
-    MONITOR=eDP-1 polybar --reload top &
-fi
+# MONITORS_DP2=$(xrandr --query | grep 'DP-2' | cut -b 6-14)
+# if [[ $MONITORS_DP2 == "connected" ]]; then
+#     MONITOR=DP-2 polybar --reload top &
+# else
+#     MONITOR=eDP-1 polybar --reload top &
+# fi
 
 ## loop monitors
-# for m in $(polybar --list-monitors | cut -d":" -f1); do
-    # MONITOR=$m polybar --reload top &
-# done
+for m in $(polybar --list-monitors | cut -d":" -f1); do
+  MONITOR=$m polybar --reload top &
+done
 
 # MONITOR=eDP1 polybar --reload top &
