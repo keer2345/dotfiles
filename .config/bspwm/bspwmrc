@@ -26,6 +26,8 @@ xrdb -merge $COLOR
 
 getcolors
 
+$HOME/.config/polybar/launch.sh &
+
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # checa se existem dois monitores definidos
@@ -43,7 +45,11 @@ else
 fi
 
 nitrogen --restore & 
+
 picom --config $HOME/.config/picom/picom.conf
+
+xautolock -time 10  -locker "~/.config/scripts/lockscreen.sh"
+
 # xfce4-power-manager &
 
 ## Bspwm configurations
@@ -68,7 +74,6 @@ bspc config split_ratio          0.52
 # remove all rules first
 bspc rule -r *:*
 
-$HOME/.config/polybar/launch.sh &
 
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
 # bspc rule -a Chromium desktop='^2'
@@ -81,7 +86,7 @@ dunst \
 -lb "$BACKGROUND" -lf "$FOREGROUND" -lfr "$GREEN" \
 -nb "$BACKGROUND" -nf "$FOREGROUND" -nfr "$BLUE" \
 -cb "$BACKGROUND" -cf "$FOREGROUND" -cfr "$RED" &
-sleep 0.5
+# sleep 0.5
 # notify-send "Bspwm Loaded" "With $SHORTCOLOR color and $SHORTWALLPAPER wallpaper"
 
 # https://wiki.archlinux.org/title/bspwm

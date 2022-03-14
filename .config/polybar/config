@@ -104,8 +104,8 @@ font-2 = FontAwesome5Free:style=Regular:size=8;4
 font-3 = FontAwesome5Brands:style=Regular:size=10;4
 font-4 = unifont:size=10;3
 font-5 = SourceHanSans-JP:style=Regular:size=7;3
-font-6 = Font Awesome 6 Free:style=Solid:size=8;3 
-font-7 = Font Awesome 6 Free:style=Regular:size=8;3 
+font-6 = Font Awesome 6 Free:style=Solid:size=8;3
+font-7 = Font Awesome 6 Free:style=Regular:size=8;3
 font-8 = Font Awesome 6 Brands:style=Regular:size=8;3
 
 ; Modules are added to one of the available blocks
@@ -115,9 +115,9 @@ font-8 = Font Awesome 6 Brands:style=Regular:size=8;3
 ; modules-left = i3 spotify-main spotify-prev spotify-play-pause spotify-next
 ; modules-left = sepEmpty rofi sep1 music sep1 i3 bspwm
 modules-left = bspwm
-modules-center = 
+modules-center =
 # modules-right = kb sep wireless-network sep audio sep memory sep cpu sep date sep battery sep powerbutton sepEmpty
-modules-right = kb sep ireless-network audio memory cpu date battery powerbutton sepEmpty
+modules-right = audio memory cpu date battery sepEmpty
 
 ; The separator will be inserted between the output of each module
 separator =
@@ -141,7 +141,7 @@ wm-name = bspwm
 ;
 ; Available positions:
 ;   left
-;   center	
+;   center
 ;   right
 ;   none
 tray-position = none
@@ -203,8 +203,8 @@ enable-ipc = true
 [module/kb]
 type = custom/script
 
-exec = sh $HOME/scripts/misc/getkblayout.sh
-label =  %output% 
+exec = sh $HOME/.config/scripts/misc/getkblayout.sh
+label =  %output%
 
 interval = 0
 
@@ -231,7 +231,7 @@ content-padding = 0
 content-background = ${root.background}
 content-foreground = #F28FAD
 
-click-left = sh $HOME/scripts/rofi/launch.sh powermenu &
+click-left = sh $HOME/.config/scripts/launch.sh powermenu &
 
 [module/rofi]
 type = custom/text
@@ -244,8 +244,8 @@ content-padding = 0
 content-background = ${root.background}
 content-foreground = #F5C2E7
 
-click-left = sh $HOME/scripts/rofi/launch.sh appmenu & 
-click-right = sh $HOME/scripts/rofi/launch.sh appmenu & 
+click-left = sh $HOME/scripts/rofi/launch.sh appmenu &
+click-right = sh $HOME/scripts/rofi/launch.sh appmenu &
 
 ; format-underline = #704214
 
@@ -349,11 +349,11 @@ label-monitor-padding = 2
 
 label-focused = %name%
 label-focused-foreground = ${root.foreground}
-label-focused-background = #302D41 
+label-focused-background = #302D41
 label-focused-padding = 2
 
 label-occupied = %name%
-label-occupied-padding = 2 
+label-occupied-padding = 2
 
 label-urgent = %name%
 label-urgent-foreground = #000000
@@ -361,7 +361,7 @@ label-urgent-background = #FAE3B0
 label-urgent-padding = 2
 
 label-empty = %name%
-label-empty-foreground = #575268 
+label-empty-foreground = #575268
 label-empty-padding = 2
 
 [module/i3]
@@ -450,23 +450,24 @@ interval = 1.0
 date = 
 
 ; Optional time format
-;time = %H:%M
-time = %I:%M %p
+time = %H:%M
+; time = %I:%M %p
 
 ; if `date-alt` or `time-alt` is defined, clicking
 ; the module will toggle between formats
-date-alt =  %A, %d %B %Y
-time-alt = %I:%M:%S %p
+; date-alt =  %A, %d %B %Y
+date-alt =  %Y-%m-%d
+time-alt = %H:%M:%S
 
 label = %date% %time%
 ; label-font = RobotoMono
-label-foreground = #D9E0EE
+label-foreground = #B0AAEE
 
 [module/wireless-network]
 type = internal/network
-interface = wlp3s0
+interface = wlp2s0
 
-label-connected = %{A1:sh $HOME/.config/rofi/wifi/wifi:}%essid%%{A} 
+label-connected = %{A1:sh $HOME/.config/rofi/wifi/wifi:}%essid%%{A}
 format-connected = <ramp-signal> <label-connected>
 label-connected-foreground = #ABE9B3
 
@@ -481,7 +482,7 @@ ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-5 = 
 
-click-left = sh /home/katsuki/.config/rofi/wifi/wifi &
+click-left = sh $HOME/.config/rofi/wifi/wifi &
 
 [module/cpu]
 type = internal/cpu
@@ -492,7 +493,7 @@ interval = 0.5
 
 label =  %percentage:2%%
 
-label-foreground = #DDB6F2
+label-foreground = #CCB6F2
 
 [module/memory]
 type = internal/memory
@@ -520,9 +521,9 @@ format = <label>
 ;   %gb_swap_free%
 ;   %gb_swap_used%
 
-label =  %gb_used%
+label =  %percentage_used:2%%
 
-label-foreground = #F5C2E7
+label-foreground = #FAC2E7
 
 [module/temperature]
 type = internal/temperature
@@ -679,5 +680,6 @@ content-padding = 0
 
 [module/sepEmpty]
 inherit = module/decor-glyph
+; content = " "
 content = " "
 content-padding = 0
