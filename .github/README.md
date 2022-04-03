@@ -95,3 +95,12 @@ EndSection
 **Theme:**
 
 - https://github.com/Murzchnvok/rofi-collection
+
+
+# Other
+## IntelliJ IDEA
+Append following code in the front of `/usr/share/idea/bin/idea.sh`:
+``` shell
+export XMODIFIERS=@im=fcitx
+export QT_IM_MODULE=fcitx
+```
