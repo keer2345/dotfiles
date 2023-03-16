@@ -99,8 +99,25 @@ EndSection
 
 # Other
 ## IntelliJ IDEA
+### Support Chinese Input
 Append following code in the front of `/usr/share/idea/bin/idea.sh`:
 ``` shell
 export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
+```
+### IDEA with google-java-format plugin
+- [Intellij Idea 使用google-java-format代码格式化/保存时自动格式化](https://blog.csdn.net/qq1009798402/article/details/112275901)
+
+如果用的是2022版本idea整合Google-java-format失效，idea打开 Help - Edit Custom VM Options添加如下配置：
+```sh
+--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED
+--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED
+--add-exports=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED
+--add-exports=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED
+--add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED
+--add-exports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED
+--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
+--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
+--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED
+--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED
 ```
